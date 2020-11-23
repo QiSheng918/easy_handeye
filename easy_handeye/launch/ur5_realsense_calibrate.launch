@@ -1,0 +1,14 @@
+<launch>
+    <include file="$(find ur5_table_moveit)/launch/ur5_moveit_planning_execution.launch"/>
+    <include file="$(find easy_handeye)/launch/publish.launch"/>
+    <include file="$(find realsense2_camera)/launch/rs_rgbd.launch">
+        <arg name="rgb_processing"                  value="true"/>
+        <arg name="debayer_processing"              value="true" />
+        <arg name="ir_processing"                   value="true"/>
+        <arg name="depth_processing"                value="true"/>
+        <arg name="depth_registered_processing"     value="true"/>
+        <arg name="disparity_processing"            value="true"/>
+        <arg name="disparity_registered_processing" value="true"/>
+    </include>
+
+</launch>
